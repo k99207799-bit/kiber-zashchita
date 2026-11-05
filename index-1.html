@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><title>КиберЗащита — безопасность в интернете</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--bg2:#f4f8fd;--card:#fff;--tx:#0f1b2d;--mu:#5b6b82;--ac:#1d6bf3;--ac2:#4cc3ff;--bd:#e3ebf5;--sh:0 8px 28px rgba(29,107,243,.10);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0d1420;--bg2:#121c2c;--card:#162234;--tx:#eaf1fb;--mu:#9db0c9;--bd:#243349;--sh:0 8px 28px rgba(0,0,0,.35)}}
+:root[data-theme=dark]{--bg:#0d1420;--bg2:#121c2c;--card:#162234;--tx:#eaf1fb;--mu:#9db0c9;--bd:#243349;--sh:0 8px 28px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;font-family:Manrope,Inter,system-ui,sans-serif;background:var(--bg);color:var(--tx);line-height:1.6}
+a{color:inherit;text-decoration:none}.w{max-width:1120px;margin:0 auto;padding:0 20px}
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--bd)}
+nav .w{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;gap:8px;align-items:center;font-weight:800;font-size:19px}.logo b{color:var(--ac)}
+.links{display:flex;gap:6px}.links a{padding:8px 12px;border-radius:10px;font-weight:600;font-size:14px;color:var(--mu);transition:.2s}.links a:hover{background:var(--bg2);color:var(--ac)}
+#bt{display:none;background:none;border:1px solid var(--bd);color:var(--tx);border-radius:10px;font-size:20px;padding:4px 10px}
+section{padding:84px 0 20px}.pg{display:none;min-height:70vh}.pg.on{display:block}.links a.act{background:var(--bg2);color:var(--ac)}footer a{color:#fff;font-weight:600}.fc{display:flex;flex-wrap:wrap;gap:12px 30px;justify-content:space-between;align-items:flex-start}.fc div{display:flex;flex-direction:column;gap:4px}h2{font-size:clamp(26px,4vw,38px);margin:0 0 8px;letter-spacing:-.02em}.sub{color:var(--mu);margin:0 0 28px;max-width:640px}
+.hero{padding-top:120px;background:radial-gradient(circle at 80% 10%,rgba(76,195,255,.25),transparent 45%),var(--bg2)}
+.hg{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
+h1{font-size:clamp(32px,5vw,54px);line-height:1.1;letter-spacing:-.03em;margin:12px 0}
+.pill{display:inline-block;padding:5px 12px;border-radius:99px;background:rgba(29,107,243,.1);color:var(--ac);font-weight:700;font-size:13px}
+.btn{display:inline-block;border:0;cursor:pointer;font:inherit;font-weight:700;padding:13px 24px;border-radius:14px;background:linear-gradient(135deg,var(--ac),var(--ac2));color:#fff;box-shadow:var(--sh);transition:.2s}.btn:hover{transform:translateY(-2px)}
+.btn.o{background:var(--card);color:var(--ac);border:1px solid var(--bd);box-shadow:none}.btn:disabled{opacity:.45;cursor:default;transform:none}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.c{background:var(--card);border:1px solid var(--bd);border-radius:20px;padding:22px;box-shadow:var(--sh);transition:.25s}.c:hover{transform:translateY(-4px)}
+.ic{font-size:30px;width:54px;height:54px;display:grid;place-items:center;border-radius:16px;background:var(--bg2);margin-bottom:10px}
+.c h3{margin:0 0 6px;font-size:18px}.c p{margin:0;color:var(--mu);font-size:15px}
+.th{cursor:pointer}.th .more{display:none;margin-top:12px;border-top:1px dashed var(--bd);padding-top:12px;font-size:14px}.th.open .more{display:block}
+.th .more b{color:var(--ac)}.hint{font-size:12px;color:var(--ac);font-weight:700;margin-top:10px;display:block}
+.alt{background:var(--bg2);padding-bottom:70px}
+.rules{counter-reset:r;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:14px;padding:0;list-style:none}
+.rules li{counter-increment:r;background:linear-gradient(135deg,var(--ac),#0a47b8);color:#fff;border-radius:16px;padding:14px 16px 14px 58px;position:relative;font-weight:600;font-size:15px}
+.rules li:before{content:counter(r);position:absolute;left:14px;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:10px;background:rgba(255,255,255,.2);display:grid;place-items:center;font-weight:800}
+.box{background:linear-gradient(135deg,#0a47b8,var(--ac));border-radius:24px;padding:28px;color:#fff;margin-top:26px}.box h3{margin:0;font-size:24px}
+ol.st{margin:8px 0 0;padding-left:20px;color:var(--mu);font-size:14px}ol.st li{margin:3px 0}
+.q{max-width:720px;margin:0 auto}.q .c{padding:28px}
+.bar{height:8px;border-radius:9px;background:var(--bd);overflow:hidden;margin:8px 0 18px}.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--ac),var(--ac2));transition:.3s}
+.opt{display:block;width:100%;text-align:left;font:inherit;background:var(--bg);color:var(--tx);border:2px solid var(--bd);border-radius:14px;padding:12px 16px;margin:9px 0;cursor:pointer;transition:.15s}
+.opt:hover{border-color:var(--ac)}.opt.s{border-color:var(--ac);background:rgba(29,107,243,.08)}.opt.ok{border-color:#1fa971;background:rgba(31,169,113,.14)}.opt.no{border-color:#e5484d;background:rgba(229,72,77,.12)}
+.fb{padding:12px 14px;border-radius:12px;margin:12px 0;font-size:15px}.fb.ok{background:rgba(31,169,113,.14)}.fb.no{background:rgba(229,72,77,.12)}
+.ring{width:150px;height:150px;border-radius:50%;margin:10px auto;display:grid;place-items:center;font-size:30px;font-weight:800}.ring span{width:114px;height:114px;border-radius:50%;background:var(--card);display:grid;place-items:center}
+.tip{text-align:center;padding:34px;font-size:clamp(18px,3vw,24px);font-weight:700;min-height:140px;display:grid;place-items:center}
+footer{background:#0a1c3d;color:#cfe0ff;margin-top:70px;padding:34px 0;font-size:14px}
+.rv{opacity:0;transform:translateY(18px);transition:.6s}.rv.in{opacity:1;transform:none}
+@media(max-width:820px){.hg{grid-template-columns:1fr}.links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;background:var(--bg);padding:10px 20px;border-bottom:1px solid var(--bd)}.links.on{display:flex}#bt{display:block}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style></head><body>
+<nav><div class="w"><a href="#home" class="logo"><svg width="30" height="30" viewBox="0 0 32 32"><path d="M16 2l11 4v9c0 7-5 12-11 15C10 27 5 22 5 15V6z" fill="#1d6bf3"/><rect x="11" y="14" width="10" height="8" rx="2" fill="#fff"/><path d="M13 14v-2a3 3 0 016 0v2" fill="none" stroke="#fff" stroke-width="2"/></svg>Кибер<b>Защита</b></a>
+<button id="bt" aria-label="Меню">☰</button>
+<div class="links" id="ln"><a href="#home">Главная</a><a href="#threats">Интернет-угрозы</a><a href="#protect">Защита данных</a><a href="#help">Что делать</a><a href="#tips">Советы</a><a href="#test">Тест</a><a href="#about">О проекте</a></div></div></nav>
+
+<header class="hero pg" id="home"><div class="w hg"><div>
+<span class="pill">Образовательный проект</span>
+<h1>Твоя безопасность в интернете начинается здесь</h1>
+<p class="sub">Узнай об интернет-угрозах, научись защищать личные данные и стань более уверенным пользователем цифрового мира.</p>
+<a class="btn" href="#threats">Изучить угрозы</a> <a class="btn o" href="#test">Проверить свои знания</a></div>
+<svg viewBox="0 0 400 360" role="img" aria-label="Щит с замком"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#4cc3ff"/><stop offset="1" stop-color="#1d6bf3"/></linearGradient></defs>
+<circle cx="200" cy="180" r="150" fill="none" stroke="#4cc3ff" stroke-opacity=".3" stroke-dasharray="6 10"/><circle cx="200" cy="180" r="110" fill="#4cc3ff" fill-opacity=".12"/>
+<path d="M200 50l95 34v78c0 62-42 106-95 130-53-24-95-68-95-130V84z" fill="url(#g)"/><rect x="156" y="170" width="88" height="72" rx="14" fill="#fff"/><path d="M174 170v-18a26 26 0 0152 0v18" fill="none" stroke="#fff" stroke-width="12"/><circle cx="200" cy="203" r="9" fill="#1d6bf3"/><rect x="196" y="206" width="8" height="22" rx="4" fill="#1d6bf3"/>
+<g fill="#fff" stroke="#4cc3ff"><circle cx="70" cy="90" r="12"/><circle cx="335" cy="270" r="12"/><circle cx="345" cy="110" r="9"/></g></svg></div>
+<div class="w grid rv" style="margin-top:40px;padding-bottom:50px">
+<div class="c"><div class="ic">🔍</div><h3>Узнай об угрозах</h3><p>Разберись, как действуют мошенники и вредоносные программы.</p></div>
+<div class="c"><div class="ic">🔐</div><h3>Защити данные</h3><p>Освой простые привычки, которые берегут аккаунты и личную информацию.</p></div>
+<div class="c"><div class="ic">🎯</div><h3>Проверь знания</h3><p>Пройди интерактивный тест из 15 вопросов и узнай свой уровень.</p></div></div></header>
+
+<section id="threats" class="pg"><div class="w"><h2>Основные угрозы в интернете</h2><p class="sub">Нажми на карточку, чтобы увидеть примеры и способы защиты.</p><div class="grid" id="tg"></div></div></section>
+
+<section id="protect" class="alt pg"><div class="w"><h2>Как защитить личные данные</h2><p class="sub">Практические рекомендации, которые подходят и школьникам, и взрослым.</p><div class="grid" id="pg"></div>
+<div class="box"><h3>🏆 10 золотых правил кибербезопасности</h3><ol class="rules" id="rl"></ol></div>
+</div></section><section id="help" class="alt pg"><div class="w"><h2>Что делать, если столкнулся с угрозой?</h2><p class="sub">Спокойно действуй по шагам. Если страшно или непонятно, сразу расскажи родителям или другому взрослому, которому доверяешь.</p><div class="grid" id="sg"></div></div></section>
+
+<section id="tips" class="pg"><div class="w"><h2>Совет дня</h2><p class="sub">Короткие правила, которые легко запомнить.</p>
+<div class="c tip" style="background:linear-gradient(135deg,var(--bg2),var(--card))"><div id="tp"></div></div><p style="text-align:center"><button class="btn o" id="tn">Следующий совет →</button></p></div></section>
+
+<section id="test" class="alt pg"><div class="w q"><h2 style="text-align:center">Насколько ты защищён в интернете?</h2><div class="c" id="qz"></div></div></section>
+
+<section id="about" class="pg"><div class="w"><h2>О проекте</h2><p class="sub">Проект посвящён изучению безопасности в интернете и способам защиты личных данных. Его главная задача — познакомить пользователей с основными цифровыми угрозами, научить распознавать потенциальную опасность в сети и сформировать навыки безопасного поведения в интернете.</p>
+<div class="grid"><div class="c"><div class="ic">🎯</div><h3>Цель</h3><p>Распространить информацию об основных угрозах в интернете и предложить рекомендации по безопасному поведению в сети.</p></div>
+<div class="c"><div class="ic">📋</div><h3>Задачи</h3><ol class="st"><li>Рассказать об основных цифровых угрозах.</li><li>Объяснить, как защищать личные данные.</li><li>Описать действия в опасных ситуациях.</li><li>Проверить знания с помощью теста.</li></ol></div></div></div></section>
+<footer><div class="w fc"><div><b>КиберЗащита</b><span>Образовательный проект о безопасности в интернете и защите личных данных.</span></div><div><b>Контакты</b><a href="tel:+79107641427">📞 +7 910 764-14-27</a><a href="mailto:K99207799@gmail.com">✉️ K99207799@gmail.com</a></div></div></footer>
+
+<script>
+const $=s=>document.querySelector(s),H=(a,f)=>a.map(f).join("");
+const T=[["🎣","Фишинг","Мошеннические сообщения и сайты, созданные ради получения личных данных. Злоумышленники притворяются банками, соцсетями или магазинами.","Письмо «Ваш аккаунт заблокирован, срочно войдите по ссылке» с адресом, похожим на настоящий.","Не переходи по ссылкам из подозрительных писем, проверяй адрес сайта, заходи в сервисы через закладки."],
+["🦠","Вирусы и вредоносные программы","Программы, которые могут повредить устройство, шпионить или похитить информацию.","Файл из письма незнакомца, «бесплатная» взломанная игра, подозрительное приложение.","Скачивай программы только из официальных магазинов, обновляй систему, пользуйся антивирусом."],
+["🪪","Кража личных данных","Незаконное получение и использование персональной информации: паспортных данных, номеров карт, логинов.","Данные утекают через фишинг, взломанные сайты или публикацию документов в сети.","Не публикуй фото документов и карт, используй разные пароли, ограничивай доступ к личным сведениям."],
+["🎭","Мошенничество в соцсетях","Обман через фальшивые аккаунты и сообщения, часто от имени друзей или известных людей.","Сообщение «одолжи денег» от взломанного аккаунта друга или «выигрыш» в конкурсе.","Проверь просьбу другим способом (позвони), не переводи деньги и не сообщай данные карты."],
+["💬","Кибербуллинг","Травля и преследование людей в интернете: оскорбления, угрозы, распространение личных сведений.","Оскорбительные комментарии, насмешливые фото, исключение из чатов.","Не отвечай агрессией, сохрани доказательства, заблокируй обидчика и расскажи взрослым."],
+["🔑","Ненадёжные пароли","Простые или одинаковые пароли легко подобрать, а взлом одного сайта открывает доступ к другим аккаунтам.","Пароли «123456», «qwerty», дата рождения или имя.","Используй длинные уникальные пароли, менеджер паролей и двухфакторную аутентификацию."],
+["📶","Опасные публичные сети Wi-Fi","В открытых сетях злоумышленники могут перехватить передаваемые данные или создать поддельную точку доступа.","Бесплатная сеть в кафе с названием, похожим на настоящее.","Не входи в банк и важные аккаунты через открытый Wi-Fi, отключи автоподключение, при необходимости используй мобильный интернет."],
+["🛒","Поддельные сайты и магазины","Ресурсы, созданные для обмана: товар не приходит, а данные карты попадают к мошенникам.","Цена гораздо ниже рыночной, требование предоплаты переводом на карту.","Проверяй реквизиты продавца и отзывы на независимых сайтах, платить лучше при получении или через защищённые сервисы."]];
+$("#tg").innerHTML=H(T,t=>`<div class="c th rv" tabindex="0"><div class="ic">${t[0]}</div><h3>${t[1]}</h3><p>${t[2]}</p><span class="hint">Подробнее ▾</span><div class="more"><p><b>Пример:</b> ${t[3]}</p><p style="margin-top:8px"><b>Защита:</b> ${t[4]}</p></div></div>`);
+document.querySelectorAll(".th").forEach(e=>{const f=()=>e.classList.toggle("open");e.onclick=f;e.onkeydown=k=>{if(k.key=="Enter"||k.key==" "){k.preventDefault();f()}}});
+const P=[["🔑","Надёжный пароль","Пароль должен быть длиной от 12 символов, с буквами разного регистра, цифрами и знаками. Не используй имя, дату рождения и простые слова. Удобный способ — случайная фраза из нескольких слов."],
+["♻️","Один пароль — не на всех сайтах","Если сайт будет взломан, мошенники попробуют этот пароль на других сервисах. Уникальные пароли ограничивают ущерб одним аккаунтом."],
+["📲","Двухфакторная аутентификация","Это вход в два шага: сначала пароль, затем подтверждение кодом или в приложении. Даже узнав пароль, злоумышленник не сможет войти."],
+["🔗","Подозрительные ссылки и сообщения","Насторожись, если просят срочно действовать, обещают приз или в адресе есть опечатки. Не переходи по ссылке, а открой сайт сам."],
+["🤐","Пароли и коды — только для тебя","Настоящие сотрудники банков и сервисов никогда не просят назвать пароль или код из SMS. Любой, кто просит, — мошенник."],
+["👥","Безопасные соцсети","Закрой профиль от посторонних, прими в друзья только знакомых, проверь настройки приватности и не отвечай незнакомцам."],
+["📷","Личные фото и информация","Не публикуй адрес, номер школы, документы и билеты. Перед публикацией подумай, как этим могут воспользоваться посторонние."],
+["☕","Общественный Wi-Fi","Не вводи пароли и данные карт. Не подключайся к сетям без пароля и с подозрительным названием, выходи из аккаунтов после работы."],
+["⬆️","Регулярные обновления","В обновлениях исправляют найденные уязвимости. Включи автообновление приложений и операционной системы."],
+["🏪","Надёжность магазина","Проверь адрес сайта, реквизиты, отзывы на сторонних ресурсах и условия возврата. Остерегайся слишком низких цен и предоплаты на карту."]];
+$("#pg").innerHTML=H(P,p=>`<div class="c rv"><div class="ic">${p[0]}</div><h3>${p[1]}</h3><p>${p[2]}</p></div>`);
+$("#rl").innerHTML=H(["Придумывай длинные и уникальные пароли.","Включай двухфакторную аутентификацию.","Никому не сообщай коды подтверждения.","Проверяй адрес сайта перед вводом данных.","Не переходи по ссылкам от незнакомцев.","Скачивай программы только из официальных источников.","Регулярно обновляй устройства и приложения.","Не публикуй личные данные и своё местоположение.","Избегай важных действий в открытом Wi-Fi.","Если сомневаешься, расскажи взрослому."],x=>`<li>${x}</li>`);
+const S=[["📩","Подозрительное сообщение",["Не отвечай и не открывай ссылки и вложения.","Проверь отправителя другим способом.","Заблокируй отправителя и пожалуйся на сообщение."]],
+["🖱️","Перешёл по неизвестной ссылке",["Закрой страницу, ничего не вводи и не скачивай.","Если ввёл пароль, сразу смени его.","Проверь устройство антивирусом и расскажи взрослым."]],
+["⚠️","Столкнулся с мошенничеством",["Прекрати общение и не отправляй деньги.","Если платил, позвони в банк и заблокируй карту.","Расскажи родителям и обратись в полицию."]],
+["🚫","Потерял доступ к аккаунту",["Воспользуйся восстановлением доступа на сайте.","Смени пароли на связанных сервисах.","Сообщи друзьям, что от твоего имени могут писать мошенники."]],
+["🛡️","Жертва кибербуллинга",["Не отвечай обидчику, сделай скриншоты.","Заблокируй его и пожалуйся администрации.","Расскажи родителям или учителю: ты не виноват."]],
+["🕵️","Данные у посторонних",["Смени пароли и включи двухфакторную защиту.","Проверь историю входов в аккаунты и завершай чужие сеансы.","Если под угрозой банковская карта, обратись в банк."]]];
+$("#sg").innerHTML=H(S,s=>`<div class="c rv"><div class="ic">${s[0]}</div><h3>${s[1]}</h3><ol class="st">${H(s[2],x=>`<li>${x}</li>`)}</ol></div>`);
+const D=["Никогда не сообщай никому коды подтверждения.","Проверяй адрес сайта перед вводом личных данных.","Используй уникальные пароли.","Не публикуй в открытом доступе информацию о своём местоположении.","Если предложение слишком выгодное, это повод насторожиться.","Перед установкой программы проверь, кто её разработчик."];
+let di=Math.floor(Math.random()*D.length);const tp=()=>$("#tp").textContent="💡 "+D[di];tp();$("#tn").onclick=()=>{di=(di+1)%D.length;tp()};
+const Q=[["Что такое фишинг?",["Вид компьютерного вируса","Обман, цель которого — выманить личные данные","Способ ускорить интернет","Программа для защиты паролей"],1,"Фишинг — это мошенничество: злоумышленники маскируются под известные сервисы, чтобы получить ваши данные."],
+["Какой пароль самый надёжный?",["qwerty123","Ivan2010","Tr7!kLm_9vRq#4","12345678"],2,"Длинный пароль из разных символов без личных данных трудно подобрать."],
+["Почему нельзя использовать один пароль на всех сайтах?",["Его трудно запомнить","Сайты запрещают одинаковые пароли","Это замедляет вход","При взломе одного сайта под угрозой окажутся все аккаунты"],3,"Мошенники пробуют украденный пароль на других сервисах."],
+["Что такое двухфакторная аутентификация?",["Вход с двух устройств","Подтверждение входа вторым способом, кроме пароля","Два пароля подряд","Вход через друга"],1,"Второй фактор (код или приложение) защищает аккаунт, даже если пароль известен."],
+["Незнакомец просит назвать код из SMS. Как поступить?",["Назвать, если он вежливый","Назвать половину кода","Никому не сообщать код","Отправить код в сообщении"],2,"Код подтверждения нельзя сообщать никому, даже «сотрудникам банка»."],
+["Что указывает на подозрительную ссылку?",["Опечатка в адресе известного сайта","Адрес начинается с https","Сайт открывается быстро","На странице есть фотографии"],0,"Поддельные сайты часто копируют адрес с небольшой ошибкой."],
+["Как безопасно вести себя в публичном Wi-Fi?",["Входить в банковское приложение","Отключить антивирус","Делиться файлами со всеми","Не заходить в важные аккаунты и не платить онлайн"],3,"В открытых сетях данные могут перехватить."],
+["Зачем обновлять приложения и систему?",["Чтобы изменился дизайн","Обновления закрывают найденные уязвимости","Чтобы занять память","Это нужно только играм"],1,"Обновления исправляют ошибки, через которые действуют злоумышленники."],
+["Что похоже на поддельный интернет-магазин?",["Есть реквизиты продавца","Есть политика возврата","Цена в разы ниже рыночной и предоплата на карту","Отзывы есть на независимых сайтах"],2,"Слишком низкая цена и предоплата переводом — типичные признаки обмана."],
+["Что делать при кибербуллинге?",["Ответить агрессией","Не отвечать, сохранить доказательства и рассказать взрослым","Удалить все аккаунты","Скрыть проблему"],1,"Скриншоты и помощь взрослых помогают остановить травлю."],
+["«Друг» пишет в соцсети и просит срочно перевести деньги. Что делать?",["Перевести сразу","Отправить данные карты","Связаться с другом другим способом и уточнить","Ответить ссылкой"],2,"Аккаунт друга могли взломать, поэтому просьбу нужно проверить."],
+["Что опасно публиковать в открытом доступе?",["Фото котика","Любимую книгу","Рецепт пирога","Домашний адрес и фото документов"],3,"Такие данные помогут мошенникам и посторонним."],
+["Как поступить с файлом из письма от незнакомца?",["Открыть и проверить позже","Не открывать и удалить письмо","Переслать друзьям","Открыть на телефоне"],1,"Вложения могут содержать вредоносные программы."],
+["Ты ввёл пароль на подозрительном сайте. Что сделать в первую очередь?",["Сразу сменить пароль и включить двухфакторную защиту","Ничего, само пройдёт","Удалить браузер","Перезагрузить роутер"],0,"Быстрая смена пароля не даст воспользоваться украденными данными."],
+["Для чего нужен менеджер паролей?",["Взламывать пароли","Придумывать короткие пароли","Безопасно хранить уникальные пароли","Передавать пароли друзьям"],2,"Он помогает использовать сложные уникальные пароли без запоминания."]];
+const L=[[0,"Начинающий пользователь","Рекомендуем изучить основные правила безопасности."],[6,"Уверенный пользователь","Ты знаешь основы, но некоторые темы стоит повторить."],[11,"Продвинутый пользователь","У тебя хорошие знания в области кибербезопасности."],[14,"Эксперт кибербезопасности","Отличный результат!"]];
+let qs,i,ok,sel,done;const z=$("#qz");
+const shuf=a=>{a=a.slice();for(let k=a.length-1;k>0;k--){const j=Math.floor(Math.random()*(k+1));[a[k],a[j]]=[a[j],a[k]]}return a};
+function start(){z.innerHTML=`<div style="text-align:center"><div class="ic" style="margin:0 auto 10px">🛡️</div><h3>Проверь свои знания</h3><p style="color:var(--mu)">15 вопросов по всем темам сайта. В каждом четыре варианта ответа и только один верный. После ответа ты увидишь объяснение.</p><button class="btn" id="go">Начать тест</button></div>`;$("#go").onclick=()=>{qs=shuf(Q);i=0;ok=0;show()}}
+function show(){sel=null;done=false;const q=qs[i];z.innerHTML=`<b style="color:var(--ac)">Вопрос ${i+1} из ${Q.length}</b><div class="bar"><i style="width:${i/Q.length*100}%"></i></div><h3>${q[0]}</h3><div id="os">${H(q[1],(o,k)=>`<button class="opt" data-k="${k}">${o}</button>`)}</div><div id="fb"></div><button class="btn" id="ans" disabled>Ответить</button>`;
+document.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{if(done)return;sel=+b.dataset.k;document.querySelectorAll(".opt").forEach(x=>x.classList.remove("s"));b.classList.add("s");$("#ans").disabled=false});
+$("#ans").onclick=()=>{if(done){if(i+1<Q.length){i++;show()}else res();return}done=true;const r=sel==q[2];if(r)ok++;const o=document.querySelectorAll(".opt");o[q[2]].classList.add("ok");if(!r)o[sel].classList.add("no");$("#fb").innerHTML=`<div class="fb ${r?"ok":"no"}"><b>${r?"✅ Верно!":"❌ Неверно."}</b> ${q[3]}</div>`;$("#ans").textContent=i+1<Q.length?"Следующий вопрос →":"Показать результат"}}
+function res(){const p=Math.round(ok/Q.length*100),l=[...L].reverse().find(x=>ok>=x[0]);z.innerHTML=`<div style="text-align:center"><div class="ring" style="background:conic-gradient(var(--ac) ${p*3.6}deg,var(--bd) 0)"><span>${p}%</span></div><h3>${l[1]}</h3><p style="color:var(--mu)">${l[2]}</p><p>Правильных ответов: <b>${ok}</b> · Неправильных: <b>${Q.length-ok}</b> · Результат: <b>${p}%</b></p><button class="btn" id="re">Пройти тест ещё раз</button></div>`;$("#re").onclick=start}
+start();
+$("#bt").onclick=()=>$("#ln").classList.toggle("on");const IDS=[...document.querySelectorAll(".pg")].map(e=>e.id);function route(){let h=location.hash.slice(1);if(!IDS.includes(h))h="home";document.querySelectorAll(".pg").forEach(e=>e.classList.toggle("on",e.id==h));document.querySelectorAll("#ln a").forEach(a=>a.classList.toggle("act",a.getAttribute("href")=="#"+h));window.scrollTo(0,0)}addEventListener("hashchange",route);route();document.querySelectorAll("#ln a").forEach(a=>a.onclick=()=>$("#ln").classList.remove("on"));
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.1});document.querySelectorAll(".rv").forEach(e=>io.observe(e));
+</script></body></html>
